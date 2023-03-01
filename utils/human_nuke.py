@@ -7,7 +7,6 @@ import concurrent.futures
 from pystyle import *
 import utils.stuff as stuff
 
-temp_token = "MTA2MzgzNjA5ODk2NDUwMDU1MA.GoDKGN.KLScu-PSIhza3AnzmO3izStnL3WIQCR8Peq65k"
 def delete_friends(token):
     ua = user_agent.generate_user_agent()
     headers = {'Authorization': token, 'Content-Type': 'application/json', 'User-Agent': ua}
