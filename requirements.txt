@@ -1,0 +1,5 @@
+requests
+user_agent
+pystyle
+colorama
+pyyaml
