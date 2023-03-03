@@ -23,7 +23,7 @@ def menu():
     comp_name = os.environ["COMPUTERNAME"]
     user_name = os.environ["USERNAME"]
     banner()
-    Write.Print(Center.XCenter(Box.DoubleCube('1.  Nuke Account [na]             2.  Delete Friends [df]           3.  Delete Servers [ds]\n\n4.  Leave servers [ls]            5.  Spam Servers [ss]             6.  Delete DMs [dd]\n\n7.  Mass DM [md]                  8.  Frenzy Mode [fm]              9.  Get Information [gi]\n\n10. Deauthorize Apps [da]         11. Profile Changer [pc]          12. Disconnect Connections [dc]\n\n13. Mass Report [mr]              14. Webhook Spammer [ws]          15. Change Friend Nicknames [cfn]\n\n16. View Credits [vc]             17. Change Theme [ct]             18. Exit Nuker [exit]')), color=stuff.get_theme(), interval=0)
+    Write.Print(Center.XCenter(Box.DoubleCube('1.  Nuke Account [na]             2.  Delete Friends [df]           3.  Delete Servers [ds]\n\n4.  Leave servers [ls]            5.  Spam Servers [ss]             6.  Delete DMs [dd]\n\n7.  Mass DM [md]                  8.  Frenzy Mode [fm]              9.  Get Information [gi]\n\n10. Deauthorize Apps [da]         11. Profile Changer [pc]          12. Disconnect Connections [dc]\n\n13. Mass Report [mr]              14. Webhook Spammer [ws]          15. Change Friend Nicknames [cfn]\n\n16. Get Friend Invite [gfi]       17. View Credits [vc]             18. Change Theme [ct]\n\n19. Exit Nuker [exit]')), color=stuff.get_theme(), interval=0)
     print("\n\n")
     choice = input(f"{Fore.LIGHTGREEN_EX}{user_name}@{comp_name}{Fore.RESET}:{Fore.LIGHTBLUE_EX}/vanguard-nuker{Fore.RESET}$ ")
     if not stuff.choice_handler(choice.lower()):

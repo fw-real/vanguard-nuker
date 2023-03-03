@@ -97,7 +97,7 @@ def vanguard_print(symbol, text):
     Write.Print("[", color=get_theme(), interval=0.00), Write.Print(time, color=Colors.reset, interval=0.00), Write.Print("]", color=get_theme(), interval=0.00), Write.Print("(", color=get_theme(), interval=0.00), Write.Print(symbol, color=Colors.reset, interval=0.00), Write.Print(")", color=get_theme(), interval=0.00), Write.Print(" ", color=get_theme(), interval=0.00), Write.Print(text, color=Colors.reset, interval=0.00)
 
 def choice_handler(choice):
-    choices = ['na', 'df', 'ds', 'da', 'dc', 'ls', 'ss', 'dd', 'md', 'fm', 'gi', 'pc', 'mr', 'ws', 'cfn', 'vc', 'ct', 'help', 'exit']
+    choices = ['na', 'df', 'ds', 'da', 'dc', 'ls', 'ss', 'dd', 'md', 'fm', 'gi', 'pc', 'mr', 'ws', 'cfn', 'gfi', 'vc', 'ct', 'help', 'exit']
     if choice in choices:
         return True
     else:
@@ -210,6 +210,10 @@ def choice_executor(choice):
         interface.credits()
     elif choice == "ct":
         interface.change_theme()
+    elif choice == "gfi":
+        vanguard_print("#", "Starting to get friend invite...")
+        print("\n")
+        human_nuke.get_friend_invite(token)
     elif choice == "exit":
         os._exit(0)
     

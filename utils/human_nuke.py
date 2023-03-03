@@ -475,3 +475,13 @@ def friend_nickname_changer(token):
         else:
             stuff.vanguard_print("-", f"-{r.status_code}- Couldn't change nickname of {id}.\n")
     stuff.vanguard_print("#", "Action completed.")
+
+def get_friend_invite(token):
+    ua = user_agent.generate_user_agent()
+    headers = { "accept" : "*/*", "accept-encoding" : "gzip, deflate", "accept-language" : "en-US", "authorization" : token, "dnt" : "1", "referer" : "https://discord.com/channels/@me", "sec-ch-ua-mobile" : "?0", "sec-ch-ua-platform" : "\"Windows\"", "sec-fetch-dest" : "empty", "sec-fetch-mode" : "cors", "sec-fetch-site" : "same-origin", "user-agent" : ua, "x-debug-options" : "bugReporterEnabled", "x-discord-locale" : "en-US" }
+    invite = requests.post("https://discord.com/api/v9/users/@me/invites", headers=headers, json={})
+    if invite.status_code == 200:
+        stuff.vanguard_print("+", f"Generated invite: https://discord.gg/{invite.json()['code']}\n")
+        time.sleep(6)
+    else:
+        stuff.vanguard_print("-", f"-{invite.status_code}- Couldn't generate invite.\n")
